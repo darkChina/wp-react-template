@@ -1,18 +1,16 @@
 const path = require('path');
 
 module.exports = {
-    entry: {
-        app: './src/index.js'
-    },
+    entry: './src/index.js',
     output: {
-        path: path.join(__dirname, '/dist'),
+        path: path.join(__dirname, 'dist/'),
         filename: 'app.js', 
-        publicPath: '/dist'
+        publicPath: '/dist/'
     },
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.(js|jsx)$/,
                 use: {
                     loader: 'babel-loader'
                 },
